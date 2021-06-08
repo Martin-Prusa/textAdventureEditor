@@ -9,6 +9,9 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
+
+import java.io.File;
 
 public class EditorController {
     private Logic logic;
@@ -104,6 +107,15 @@ public class EditorController {
         this.image.setText(room.getImg());
 
         this.text.setText("Loaded room: "+this.name.getText());
+    }
+
+    @FXML
+    void selectRoomImage(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select Image");
+        File file = fileChooser.showOpenDialog(Window.stage);
+        this.image.setText(file.getName());
+        this.logic.copyFile(file);
     }
 
     public void redraw() {

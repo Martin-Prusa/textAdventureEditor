@@ -68,9 +68,14 @@
                               <Label text="Room Image:" GridPane.rowIndex="1" />
                               <Label text="Item in room:" GridPane.rowIndex="2" />
                               <Label text="Required Item:" GridPane.rowIndex="3" />
-                              <TextField fx:id="image" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <TextField fx:id="item" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <TextField fx:id="reqItem" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#selectRoomImage" text="Select Image" />
+                                    <TextField fx:id="image" editable="false" maxWidth="162.0" prefHeight="26.0" prefWidth="125.0" />
+                                 </children>
+                              </FlowPane>
                            </children>
                         </GridPane>
                         <Label layoutX="20.0" layoutY="200.0" text="Room description:" />
