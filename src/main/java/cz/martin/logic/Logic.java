@@ -54,7 +54,6 @@ public class Logic {
             Path from = Paths.get(file.toURI());
             String name = file.getName();
             File toF = new File("./../textovaHra/src/main/resources/img/"+name);
-            //Path to = Paths.get("\"C:\\Users\\marti\\IdeaProjects\\Skola\\textovaHra - kopie\\textovaHra\\src\\main\\resources\\img\"");
             Path to = Paths.get(toF.toURI());
             Files.copy(from, to);
         } catch (Exception ignored) {}
